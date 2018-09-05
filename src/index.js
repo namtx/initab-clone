@@ -1,7 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Search from './components/Search';
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import createSagaMiddleware from 'redux-saga';
+import Reddit from './components/Reddit';
+import rootReducer from './reducers';
+import rootSaga from './sagas';
 
-const Index = () => (<div><Search /></div>);
+const sagaMiddleware = createSagaMiddleware();
+const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(sagaMiddleware)));
 
-ReactDOM.render(<Index />, document.getElementById('index'));
+sagaMiddleware.run(rootSaga);
+
+ReactDOM.render(
+  <Provider store={store}>
+    <Reddit />
+  </Provider>,
+  document.getElementById('index'),
+);
