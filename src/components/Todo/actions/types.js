@@ -1,0 +1,10 @@
+export const ADD_TODO = 'ADD_TODO';
+export const FETCH_TODOS = 'FETCH_TODOS';
+export const COMPLETE_TODO = 'COMPLETE_TODOS';
+export const ADD_TODO_SUCCESS = 'ADD_TODO_SUCCESS';
+export const ADD_TODO_FAILED = 'ADD_TODO_FAILED';
+export const FETCH_SUCCESS = 'FETCH_SUCCESS';
+export const FETCH_FAILED = 'FETCH_FAILED';
+export const UPDATE_TODO = 'UPDATE_TODO';
+export const UPDATE_SUCCESS = 'UPDATE_SUCCESS';
+export const UPDATE_FAILED = 'UPDATE_FAILED';

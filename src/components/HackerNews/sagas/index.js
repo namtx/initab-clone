@@ -27,6 +27,6 @@ function* fetchStory(id) { /* eslint-disable-line consistent-return */
 export default function* watchFetchTopStories() {
   yield takeEvery(FETCH_TOP_STORIES_REQUESTED, fetchHackerNewsTopStories);
   const action = yield take(FETCH_STORY_REQUESTED);
-  const stories = yield all(action.payload.slice(0, 10).map(id => call(fetchStory, id)));
+  const stories = yield all(action.payload.slice(0, 20).map(id => call(fetchStory, id)));
   yield put({ type: FETCH_HN_SUCCESS, payload: stories });
 }

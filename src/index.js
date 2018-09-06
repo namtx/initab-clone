@@ -7,6 +7,8 @@ import createSagaMiddleware from 'redux-saga';
 import Reddit from './components/Reddit';
 import rootReducer from './reducers';
 import rootSaga from './sagas';
+import HackerNews from './components/HackerNews';
+import Todo from './components/Todo';
 
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(sagaMiddleware)));
@@ -15,7 +17,9 @@ sagaMiddleware.run(rootSaga);
 
 ReactDOM.render(
   <Provider store={store}>
-    <Reddit />
+    <div>
+      <Todo />
+    </div>
   </Provider>,
   document.getElementById('index'),
 );
