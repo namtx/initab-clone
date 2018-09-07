@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './Reddit.css';
+import styles from './Reddit.scss';
 
 const Header = ({ title }) => (
   <h1 className={styles.header}>{title.toUpperCase()}</h1>

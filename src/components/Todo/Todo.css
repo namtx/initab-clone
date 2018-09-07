@@ -1,7 +1,0 @@
-:local(.done) {
-  text-decoration: line-through;
-}
-
-:local(.pending) {
-  text-decoration: blue;
-}

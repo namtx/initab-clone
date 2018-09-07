@@ -1,0 +1,17 @@
+:local(.item) {
+  padding: 3px 5px;
+  
+  & > img {
+    margin-right: 7px;
+  }
+  
+  & > a {
+    color: #6272a4;
+    text-decoration: none;
+
+    &:hover {
+      color: #f1fa8c;
+      text-decoration: underline;
+    }
+  }
+}

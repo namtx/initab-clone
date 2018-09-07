@@ -1,0 +1,43 @@
+:local(.header) {
+  color: #8be9fd;
+  text-align: center;
+  font-weight: 700;
+  padding: 15px 20px;
+}
+
+:local(.item) {
+  padding-left: 20px;
+  border-left: 4px solid;
+  border-left-color: #282a36;
+  padding-bottom: 20px;
+  cursor: pointer;
+  
+  a {
+    text-decoration: none;
+  }
+
+  &:hover {
+    border-left-color: #50fa7b;
+  }
+
+  a.pink {
+    color: #ff79c6;
+    text-decoration: underline;
+  }
+
+  .cyan {
+    color: #8be9fd;
+  }
+
+  .yellow {
+    color: #f1fa8c;
+  }
+
+  .comment {
+    color: #6272a4;
+  }
+
+  .white {
+    color: #f8f8f2;
+  }
+}

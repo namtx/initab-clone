@@ -8,10 +8,10 @@ const fetchRedditPosts = () => (
       const posts = response.data.data.children;
       return posts.map((p) => {
         const {
-          id, title, author_fullname, score, url, /* eslint-disable-line camelcase */
+          id, title, author_fullname, score, url, permalink, /* eslint-disable-line camelcase */
         } = p.data;
         return {
-          id, title, authorFullname: author_fullname, score, url,
+          id, title, authorFullname: author_fullname, score, url, permalink,
         };
       });
     })

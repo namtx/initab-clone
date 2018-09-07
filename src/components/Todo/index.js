@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import actions from './actions';
 import Item from './Item';
+import styles from './Todo.scss';
 
 
 class Todo extends React.Component {
@@ -56,7 +57,9 @@ class Todo extends React.Component {
 
     return (
       <div>
-        <input type="text" value={newTodo} onKeyDown={this.handleKeyDown} onChange={this.handleChange} />
+        <div className={styles.input}>
+          <input type="text" value={newTodo} onKeyDown={this.handleKeyDown} onChange={this.handleChange} />
+        </div>
         { isFetching ? (
           <p>Loading...</p>
         ) : (

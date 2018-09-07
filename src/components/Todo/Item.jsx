@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './Todo.css';
+import styles from './Todo.scss';
 
 
 class Item extends React.Component {
@@ -20,9 +20,9 @@ class Item extends React.Component {
     return (
       <li>
         <div>
-          <input type="checkbox" onClick={() => this.handleClick(itemKey)} checked={done} />
+          <input id={itemKey} className={styles.checkbox} type="checkbox" onClick={() => this.handleClick(itemKey)} checked={done} />
           { /* eslint-disable-next-line */ }
-          <label className={done ? styles.done : styles.pending}>{content}</label>
+          <label htmlFor={itemKey} className={done ? styles.done : styles.pending}>{content}</label>
         </div>
       </li>
     );
